@@ -15,6 +15,8 @@ class Florist {
         Delivery_Person* deliveryPerson;
 
     public:
+        Florist(Wholesaler* wholesaler, FlowerArranger* flowerArranger, Delivery_Person* deliveryPerson)
+            : wholesaler(wholesaler), flowerArranger(flowerArranger), deliveryPerson(deliveryPerson) {}
         void acceptOrder(Person* person, std::vector<std::string> flowerTypes);
 };
 #endif 

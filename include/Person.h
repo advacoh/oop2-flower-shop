@@ -11,6 +11,7 @@ private:
     std::string name;
 
 public:
+    Person(const std::string& name) : name(name) {}
     void acceptFlowers(FlowersBouquet* bouquet);
     void orderFlowers(Florist* florist, Person* recipient, const std::vector<std::string>& flowers);
 };
