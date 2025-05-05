@@ -1,18 +1,19 @@
-#ifndef WHOLESALER_H
+#pragma once
 #define WHOLESALER_H
 
 #include <vector>
 #include <string>
 #include "Grower.h"         // For Grower
-#include "FlowersBouquet.h"  // For FlowerBouquet
+#include "FlowersBouquet.h" 
+#include "Person.h" // For FlowerBouquet
 
-class Wholesaler {
+class Wholesaler :public Person {
 private:
     Grower* grower;
 
 public:
-    Wholesaler(Grower* grower) : grower(grower) {}
+    explicit Wholesaler(const std::string& name, Grower* grower);
     FlowersBouquet* acceptOrder(const std::vector<std::string>& flowers);
 };
 
-#endif // WHOLESALER_H
+

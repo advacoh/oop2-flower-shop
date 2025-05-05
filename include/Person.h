@@ -1,19 +1,25 @@
-#ifndef PERSON_H
+#pragma once
 #define PERSON_H
 
 #include <string>
 #include <vector>
 #include "FlowersBouquet.h"  // For FlowerBouquet
-#include "Florist.h"        // Florist is defined in another file
+class Florist; // Forward declaration of Florist
+ 
+class FlowersBouquet;    
 
 class Person {
 private:
     std::string name;
 
 public:
-    Person(const std::string& name) : name(name) {}
+    
+    explicit Person(const std::string& name);
+    virtual ~Person() = default;
     void acceptFlowers(FlowersBouquet* bouquet);
     void orderFlowers(Florist* florist, Person* recipient, const std::vector<std::string>& flowers);
+    const std::string& getName() const { return name; }
+     
 };
 
-#endif // PERSON_H
+

@@ -1,18 +1,12 @@
-#ifndef DELIVERY_PERSON_H
+#pragma once
 #define DELIVERY_PERSON_H
 #include <vector>
 #include <string>
-#include "Florist.h"
-#include "FlowersBouquet.h"
-#include "Florist.h"
+#include "Person.h" 
+class FlowersBouquet;
 
-class Delivery_Person {
-    private:
-        std::string name;
-
+class Delivery_Person : public Person {
     public:
-        void orderFlowers(Florist* florist, std::vector<std::string> flowerTypes);
-        void acceptFlowers(FlowersBouquet* bouquet);
-    
+        explicit Delivery_Person(const std::string& name);
+        void deliver(Person* recipient, FlowersBouquet* bouquet);
     };
-#endif 

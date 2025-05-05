@@ -1,14 +1,18 @@
 #include "../include/Grower.h"
 #include "../include/Wholesaler.h"
 #include "../include/FlowersBouquet.h"
+#include "../include/Person.h"
+#include "../include/Florist.h"
 #include <iostream>
 #include <vector>
 
-Wholesaler::Wholesaler(Grower* grower) : grower(grower) {}
+Wholesaler::Wholesaler(const std::string& name, Grower* grower) :Person(name), grower(grower) {
+    // Constructor implementation
+}
 
 FlowersBouquet* Wholesaler::acceptOrder(const std::vector<std::string>& flowers) {
-    std::cout << "Wholesaler forwards request to Grower" << std::endl;
+    std::cout << "Wholesaler " << getName() << " forwards request to Grower " << grower->getName() << "." << std::endl;
     FlowersBouquet* bouquet = grower->prepareOrder(flowers);
-    std::cout << "Grower returns the bouquet to the Florist" << std::endl;
+    std::cout << "Grower " << grower->getName() << " returns the bouquet to the Florist "<< std::endl;
     return bouquet;
 }

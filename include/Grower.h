@@ -1,20 +1,21 @@
-#ifndef GROWER_H
+#pragma once
 #define GROWER_H
 
 #include <vector>
 #include <string>
 #include "Gardener.h"       // For Gardener
 #include "FlowersBouquet.h"
-#include "Flower_Arranger.h"
+
+#include "Person.h"
   
 
-class Grower {
+class Grower :public Person {
 private:
     Gardener* gardener;
 
 public:
-    Grower(Gardener* gardener) : gardener(gardener) {}
+    explicit Grower(const std::string& name, Gardener* gardener);
     FlowersBouquet* prepareOrder(const std::vector<std::string>& bouquet);
 };
 
-#endif // GROWER_H
+
