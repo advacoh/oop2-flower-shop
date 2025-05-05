@@ -11,7 +11,8 @@
 #include "../include/Florist.h"
 #include <vector>
 #include <string>
-
+//building the project: g++ -std=c++17 -Iinclude src/*.cpp -o main.exe
+// running the project: ./main.exe
 int main() {
     // leaf actors
     Gardener gardener("Garrett");
