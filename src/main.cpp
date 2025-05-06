@@ -17,8 +17,11 @@ int main() {
     // leaf actors
     Gardener gardener("Garrett");
     Grower   grower("Gray", &gardener);
+    gardener.getGrower(&grower);
+   
     Wholesaler wholesaler("Watson", &grower);
-    FlowerArranger arranger("Fiona");
+    grower.getWholesaler(&wholesaler);
+    FlowerArranger arranger("Flona");
     Delivery_Person courier("Dylan");
 
     // florist who coordinates

@@ -15,7 +15,7 @@ void Florist::acceptOrder(Person* person, std::vector<std::string> flowerTypes) 
     FlowersBouquet* bouquet = wholesaler->acceptOrder(flowerTypes);
     std::cout << "Florist "<< getName() <<" request flowers arrangement from Flower Arranger." <<  std::endl;
     flowerArranger->arrangeFlowers(bouquet);
-    std::cout << "Florist "<< getName() <<" forwards arranged flowers to Delivery Person." << std::endl;
-    deliveryPerson->acceptFlowers(bouquet);
+    std::cout << "Florist "<< getName() <<" forwards flowers to Delivery Person.." << std::endl;
+    deliveryPerson->deliver(person, bouquet);
     
 }

@@ -10,9 +10,10 @@ Wholesaler::Wholesaler(const std::string& name, Grower* grower) :Person(name), g
     // Constructor implementation
 }
 
+
 FlowersBouquet* Wholesaler::acceptOrder(const std::vector<std::string>& flowers) {
     std::cout << "Wholesaler " << getName() << " forwards request to Grower " << grower->getName() << "." << std::endl;
     FlowersBouquet* bouquet = grower->prepareOrder(flowers);
-    std::cout << "Grower " << grower->getName() << " returns the bouquet to the Florist "<< std::endl;
+    std::cout << "Wholesaler " << getName() << " returns flowers to the Florist.. "<< std::endl;
     return bouquet;
 }

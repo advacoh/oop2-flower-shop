@@ -3,14 +3,20 @@
 #include <vector>
 #include "../include/Gardener.h"
 #include "../include/Person.h"
+#include "../include/Wholesaler.h"
+#include "../include/Grower.h"
 
 Gardener::Gardener(const std::string& name) : Person(name) {
     
 }
+void Gardener::getGrower(Grower* g) {
+    grower = g;
+}
+
 
 FlowersBouquet* Gardener::prepareBouquet(const std::vector<std::string>& bouquet) {
-    std::cout << "Gardener " << getName() << "prepares the bouquet" << std::endl;
+    std::cout << "Gardener " << getName() << "  prepares flowers." << std::endl;
     FlowersBouquet* flowersBouquet = new FlowersBouquet(bouquet);
-    std::cout << "Gardener "<< getName() << " returns the bouquet to the grower" << std::endl;
+    std::cout << "Gardener "<< getName() << " returns flowers to " << grower ->getName() << std::endl;
     return flowersBouquet;
 }
