@@ -17,10 +17,9 @@ int main() {
     // leaf actors
     Gardener gardener("Garrett");
     Grower   grower("Gray", &gardener);
-    gardener.getGrower(&grower);
    
     Wholesaler wholesaler("Watson", &grower);
-    grower.getWholesaler(&wholesaler);
+    
     FlowerArranger arranger("Flona");
     Delivery_Person courier("Dylan");
 
@@ -28,8 +27,8 @@ int main() {
     Florist florist("Fred", &wholesaler, &arranger, &courier);
 
     // two ordinary people
-    Person chris("Chris");
-    Person robin("Robin");
+        Person chris("Chris");
+        Person robin("Robin");
 
     std::vector<std::string> flowers = {"Roses", "Violets", "Gladiolus"};
     chris.orderFlowers(&florist, &robin, flowers);

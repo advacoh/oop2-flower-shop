@@ -13,9 +13,11 @@ Florist::Florist(const std::string& name, Wholesaler* wholesaler, FlowerArranger
 void Florist::acceptOrder(Person* person, std::vector<std::string> flowerTypes) {
     std::cout << "Florist " << getName() << " forwards request to Wholesaler "<< wholesaler->getName()<< "." << std::endl;
     FlowersBouquet* bouquet = wholesaler->acceptOrder(flowerTypes);
-    std::cout << "Florist "<< getName() <<" request flowers arrangement from Flower Arranger." <<  std::endl;
+    std::cout << "Wholesaler " << wholesaler->getName() << " returns flowers to Florist "<< getName() << "." << std::endl;
+    std::cout << "Florist "<< getName() <<" request flowers arrangement from Flower Arranger " << flowerArranger -> getName() << "." <<  std::endl;
     flowerArranger->arrangeFlowers(bouquet);
-    std::cout << "Florist "<< getName() <<" forwards flowers to Delivery Person.." << std::endl;
+    std::cout << "Flower Arranger " << flowerArranger->getName() << " returns arranged flowers to Florist "<< getName() << "." << std::endl;
+    std::cout << "Florist "<< getName() <<" forwards flowers to Delivery Person " << deliveryPerson -> getName() << "." << std::endl;
     deliveryPerson->deliver(person, bouquet);
     
 }

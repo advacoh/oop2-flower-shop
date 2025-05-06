@@ -9,6 +9,7 @@ FlowerArranger::FlowerArranger(const std::string& name) : Person(name) {
 }
 
 void FlowerArranger::arrangeFlowers(FlowersBouquet* bouquet) {
+    std::cout << "Flower Arranger " << getName() << " arranges flowers." << std::endl;
     bouquet->arrange(); 
-    std::cout << "Flower Arranger " << getName() << " returns arranged flowers to..." << std::endl;
+   
 }

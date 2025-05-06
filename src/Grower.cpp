@@ -14,8 +14,8 @@ void Grower::getWholesaler(Wholesaler* w) {
 }
 
 FlowersBouquet* Grower::prepareOrder(const std::vector<std::string>& bouquet) {
-    std::cout << "Grower " << getName()<< " forwards the request to Gardener" << std::endl;
+    std::cout << "Grower " << getName() << " forwards the request to Gardener " << gardener->getName() << "." << std::endl;
     FlowersBouquet* flowersBouquet = gardener->prepareBouquet(bouquet);
-    std::cout << "Grower " << getName() <<" returns flowers to Wholesaler " << wholesaler -> getName() << "." << std::endl;
+    std::cout << "Gardener " << gardener->getName() << " returns flowers to Grower " << getName() << "." << std::endl;
     return flowersBouquet;
 }

@@ -22,9 +22,9 @@ void Person::orderFlowers(Florist* florist, Person* recipient, const std::vector
     florist->acceptOrder(recipient, flowers);
 }
 void Person::acceptFlowers(FlowersBouquet* bouquet) {
-    std::cout << name << " accepts flowers: ";
+    std::cout << name << " accepts the flowers: ";
     printFlowers(bouquet->getFlowers());           
-    std::cout << std::endl;
+    std::cout << "." << std::endl;
 }
 
 

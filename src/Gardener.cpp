@@ -15,8 +15,7 @@ void Gardener::getGrower(Grower* g) {
 
 
 FlowersBouquet* Gardener::prepareBouquet(const std::vector<std::string>& bouquet) {
-    std::cout << "Gardener " << getName() << "  prepares flowers." << std::endl;
+    std::cout << "Gardener " << getName() << " prepares flowers." << std::endl;
     FlowersBouquet* flowersBouquet = new FlowersBouquet(bouquet);
-    std::cout << "Gardener "<< getName() << " returns flowers to " << grower ->getName() << std::endl;
     return flowersBouquet;
 }
