@@ -16,9 +16,9 @@ private:
 
 
 public:
-    virtual ~Grower();
+    
     explicit Grower(const std::string& name, Gardener* gardener);
-    void getWholesaler(Wholesaler* w);
+
     FlowersBouquet* prepareOrder(const std::vector<std::string>& bouquet);
 };
 

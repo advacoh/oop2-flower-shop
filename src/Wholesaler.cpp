@@ -10,10 +10,7 @@ Wholesaler::Wholesaler(const std::string& name, Grower* grower) :Person(name), g
     
 }
 
-virtual Wholesaler::~Wholesaler() {
-    delete grower;
-    grower = nullptr;
-}
+
 FlowersBouquet* Wholesaler::acceptOrder(const std::vector<std::string>& flowers) {
     std::cout << "Wholesaler " << getName() << " forwards request to Grower " << grower->getName() << "." << std::endl;
     FlowersBouquet* bouquet = grower->prepareOrder(flowers);

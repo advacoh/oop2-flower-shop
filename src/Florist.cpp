@@ -22,11 +22,3 @@ void Florist::acceptOrder(Person* person, std::vector<std::string> flowerTypes) 
     
 }
 
-virtual ~Florist() {
-    delete wholesaler;
-    delete flowerArranger;
-    delete deliveryPerson;
-    wholesaler = nullptr;
-    flowerArranger = nullptr;
-    deliveryPerson = nullptr;
-}

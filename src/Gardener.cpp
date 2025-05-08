@@ -9,9 +9,6 @@
 Gardener::Gardener(const std::string& name) : Person(name) {
     
 }
-void Gardener::getGrower(Grower* g) {
-    grower = g;
-}
 
 
 FlowersBouquet* Gardener::prepareBouquet(const std::vector<std::string>& bouquet) {

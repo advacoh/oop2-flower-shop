@@ -15,7 +15,7 @@ private:
 public:
     
     explicit Person(const std::string& name);
-    virtual ~Person() = default;
+    
     void acceptFlowers(FlowersBouquet* bouquet);
     void orderFlowers(Florist* florist, Person* recipient, const std::vector<std::string>& flowers);
     const std::string& getName() const { return name; }

@@ -15,6 +15,6 @@ class Florist :public Person {
 
     public:
         explicit Florist(const std::string& name, Wholesaler* wholesaler, FlowerArranger* flowerArranger, Delivery_Person* deliveryPerson);
-        virtual ~Florist(); 
+        
         void acceptOrder(Person* person, std::vector<std::string> flowerTypes);
 };
