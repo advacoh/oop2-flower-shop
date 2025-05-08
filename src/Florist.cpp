@@ -21,3 +21,12 @@ void Florist::acceptOrder(Person* person, std::vector<std::string> flowerTypes) 
     deliveryPerson->deliver(person, bouquet);
     
 }
+
+virtual ~Florist() {
+    delete wholesaler;
+    delete flowerArranger;
+    delete deliveryPerson;
+    wholesaler = nullptr;
+    flowerArranger = nullptr;
+    deliveryPerson = nullptr;
+}

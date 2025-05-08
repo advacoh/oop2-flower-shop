@@ -12,11 +12,10 @@ class Grower; // Forward declaration of Grower
 
 class Gardener:public Person {
 private:
-    Grower* grower;
+    
 
 public:
     Gardener(const std::string& name);
-    void getGrower(Grower* g);
     FlowersBouquet* prepareBouquet(const std::vector<std::string>& bouquet);
 };
 

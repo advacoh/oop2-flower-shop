@@ -13,6 +13,11 @@ void Grower::getWholesaler(Wholesaler* w) {
     wholesaler = w;
 }
 
+virtual ~Grower() {
+    delete gardener;
+    gardener = nullptr;
+}
+
 FlowersBouquet* Grower::prepareOrder(const std::vector<std::string>& bouquet) {
     std::cout << "Grower " << getName() << " forwards the request to Gardener " << gardener->getName() << "." << std::endl;
     FlowersBouquet* flowersBouquet = gardener->prepareBouquet(bouquet);

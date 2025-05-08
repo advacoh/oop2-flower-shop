@@ -25,7 +25,11 @@ void Person::acceptFlowers(FlowersBouquet* bouquet) {
     std::cout << name << " accepts the flowers: ";
     printFlowers(bouquet->getFlowers());           
     std::cout << "." << std::endl;
+    delete bouquet;
+    bouquet = nullptr;
 }
+
+
 
 
 

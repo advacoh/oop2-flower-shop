@@ -13,9 +13,10 @@ class Wholesaler; // Forward declaration of Wholesaler
 class Grower :public Person {
 private:
     Gardener* gardener;
-    Wholesaler* wholesaler; 
+
 
 public:
+    virtual ~Grower();
     explicit Grower(const std::string& name, Gardener* gardener);
     void getWholesaler(Wholesaler* w);
     FlowersBouquet* prepareOrder(const std::vector<std::string>& bouquet);
